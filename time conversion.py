@@ -48,6 +48,72 @@ def convert():
             elif bsttimegmt < 1:
                 bsttimegmt = bsttimegmt+24
             time2.config(text=bsttimegmt)
+    elif timezone1 == "EST":
+        if timezone2 == "GMT":
+            gmttimeest = int(time1)+4
+            if gmttimeest > 24:
+                gmttimeest = gmttimeest-24
+            elif gmttimeest < 1:
+                gmttimeest = gmttimeest+24
+            time2.config(text=gmttimeest)
+        elif timezone2 == "AEST":
+            aesttimeest = int(time1)+14
+            if aesttimeest > 24:
+                aesttimeest = aesttimeest-24
+            elif aesttimeest < 1:
+                aesttimeest = aesttimeest+24
+            time2.config(text=aesttimeest)
+        elif timezone2 == "BST":
+            bsttimeest = int(time1)+5
+            if bsttimeest > 24:
+                bsttimeest = bsttimeest-24
+            elif bsttimeest < 1:
+                bsttimeest = bsttimeest+24
+            time2.config(text=bsttimeest)
+    elif timezone1 == "AEST":
+        if timezone2 == "GMT":
+            gmttimeaest = int(time1)-10
+            if gmttimeaest > 24:
+                gmttimeaest = gmttimeaest-24
+            elif gmttimeaest < 1:
+                gmttimeaest = gmttimeaest+24
+            time2.config(text=gmttimeaest)
+        elif timezone2 == "EST":
+            esttimeaest = int(time1)+14
+            if esttimeaest > 24:
+                esttimeaest = esttimeaest-24
+            elif esttimeaest < 1:
+                esttimeaest = esttimeaest+24
+            time2.config(text=esttimeaest)
+        elif timezone2 == "BST":
+            bsttimeaest = int(time1)+9
+            if bsttimeaest > 24:
+                bsttimeaest = bsttimeaest-24
+            elif bsttimeaest < 1:
+                bsttimeaest = bsttimeaest+24
+            time2.config(text=bsttimeaest)
+    elif timezone1 == "BST":
+        if timezone2 == "GMT":
+            gmttimebst = int(time1)-1
+            if gmttimebst > 24:
+                gmttimebst = gmttimebst-24
+            elif gmttimebst < 1:
+                gmttimebst = gmttimebst+24
+            time2.config(text=gmttimebst)
+        elif timezone2 == "EST":
+            esttimebst = int(time1)-5
+            if esttimebst > 24:
+                esttimebst = esttimebst-24
+            elif esttimebst < 1:
+                esttimebst = esttimebst+24
+            time2.config(text=esttimebst)
+        elif timezone2 == "AEST":
+            aesttimebst = int(time1)+9
+            if aesttimebst > 24:
+                aesttimebst = aesttimebst-24
+            elif aesttimebst < 1:
+                aesttimebst = aesttimebst+24
+            time2.config(text=aesttimebst)
     else:
         messagebox.showinfo(title="Error", message="That is not a valid time")
 
